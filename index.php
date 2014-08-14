@@ -6,8 +6,9 @@
 		<title>NOVA</title>
 		<link rel="stylesheet" href="css/default.css" type="text/css"/>
 		<link rel="stylesheet" href="css/index.css" type="text/css"/>
-		<script src="js/index.js" type="text/javascript"></script>
 		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+		
 	</head>
 
 	<body>

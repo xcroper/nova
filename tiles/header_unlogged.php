@@ -6,7 +6,7 @@
 			<div id="login" class="right">
 			<form id="login" name="login" method="post" autocomplete="on" enctype="multipart/form-data" action="login.php">
 				<input type="email" name="email" id="email" autocomplete="on" autofocus="autofocus" placeholder="E-mail" value="" class="input_dados" required/>
-				<input type="password" name="password" id="password" placeholder="Password" value="" class="input_dados" required/>
+				<input type="password" name="senha" id="senha" placeholder="Password" value="" class="input_dados" required/>
 				<input type="submit" name="submit_login" class="submit_login" class="botao" value="Login"/>
 				
 			</form>
