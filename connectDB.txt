@@ -1,0 +1,4 @@
+Para conectar com o BD
+//Conectando BD
+			$conn = new ConexaoMySql(nome, senha);
+			$db = $conn->connect();

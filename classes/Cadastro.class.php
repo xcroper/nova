@@ -1,17 +1,21 @@
 <?php
 	
 	class Cadastro{
-		public $nome;
-		public $username;
-		public $email;
-		protected $senha;
-		protected $confirma_senha;
-		public $data_nascimento;
+		
+		//Dados a serem recebidos para o cadastro ser efetuado
+		private $tipo;
+		private $nome;
+		private $username;
+		private $email;
+		private $senha;
+		private $confirma_senha;
+		private $data_nascimento;
 
 
+		//Function construct apenas requere as variaveis para a classe recebe-las
+		public function __construct($tipo, $nome, $username, $email, $senha, $confirma_senha, $data_nascimento){
 
-		public function __construct($nome, $username, $email, $senha, $confirma_senha, $data_nascimento){
-
+					$this->tipo            =$tipo;
 					$this->nome            = $nome;
 					$this->username        = $username;
 					$this->email           = $email;
@@ -20,33 +24,43 @@
 					$this->data_nascimento = $data_nascimento;
 			}
 
-
-		public function obterDados(){
-			$nome = trim($_POST['nome']);
-			$username = trim($_POST['username']);
-			$email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-			$senha = trim($_POST['senha']);
-			$confirma_senha = trim($_POST['confirma_senha']);
-			$data_nascimento = trim($_POST['data_nascimento']);
+		
+		
+		//Insere dados no DB 
+		public function inserirDados(){
 			
-			$info[] = array("nome"            => $nome, 
-				            "username"        => $username, 
-				            "email"           => $email, 
-				            "senha"           => $senha, 
-				            "confirma_senha"  => $confirma_senha, 
-				            "data_nascimento" => $data_nascimento);
+			//Conectando BD
+			$conn = new ConexaoMySql('root', '');
+			$db = $conn->connect();
 
-			return $info;
-			}
-
-		public function inserirDados($nome, $username, $email, $senha, $data_nascimento){
-				$query = "INSERT INTO cadastro (nome, username, email, senha, data_nascimento) 
-						  VALUES ('".$nome."', '".$username."', '".$email."', '".$senha."','".$data_nascimento."')";						  
+			//Preparando sql
+			$sql  = "INSERT INTO cadastro (tipo, nome, username, email, senha, data_nascimento)";
+			$sql .= " VALUES (:tipo, :nome, :username, :email, :senha, :data_nascimento)";
+			
+			try {
+				$create = $db->prepare($sql);
 				
-				mysql_query($query) or die(mysql_error());
+				$create->bindValue(':tipo',     $this->tipo, PDO::PARAM_INT);
+				$create->bindValue(':nome',     $this->nome, PDO::PARAM_STR);
+				$create->bindValue(':username', $this->username, PDO::PARAM_STR);
+				$create->bindValue(':email',    $this->email, PDO::PARAM_STR);
+				$create->bindValue(':senha',    $this->senha, PDO::PARAM_STR);
+				$create->bindValue(':data_nascimento', $this->data_nascimento, PDO::PARAM_INT);
+				
+				$create->execute();
 			
-		}	
+			}catch(PDOException $e){
+				echo  $e->getMessage();
+			}	
 
-	}
+			//Encerrando conexao com o DB
+			$conn->
+
+
+		}//end inserirDados
+	
+
+
+}//end Class
 
 ?>

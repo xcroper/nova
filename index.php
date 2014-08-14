@@ -22,7 +22,7 @@
 				<img id="login_img" src="img/signup.png" />
 				<form id="signup" name="cadastro" method="post"  enctype="multipart/form-data" action="efetuarCadastro.php">
 						
-						<input type="hidden" name="type" id="type" value="0" />
+						<input type="hidden" name="tipo" id="tipo" value="1" />
 
 						<input type="text" name="nome" id="nome" value="<?php if(isset($_POST['nome'])){echo $_POST['nome'];} ?>" 
 						placeholder="Nome" class="input_dados" maxlength=40 required />
