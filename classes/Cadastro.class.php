@@ -53,9 +53,6 @@
 				echo  $e->getMessage();
 			}	
 
-			//Encerrando conexao com o DB
-			$conn->
-
 
 		}//end inserirDados
 	
