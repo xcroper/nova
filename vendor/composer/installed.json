@@ -1,0 +1,57 @@
+[
+    {
+        "name": "respect/validation",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Respect/Validation.git",
+            "reference": "3e31d979925b366dfd92d2ac25fb8545c2b3c7fb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Respect/Validation/zipball/3e31d979925b366dfd92d2ac25fb8545c2b3c7fb",
+            "reference": "3e31d979925b366dfd92d2ac25fb8545c2b3c7fb",
+            "shasum": ""
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "symfony/validator": "~2.1",
+            "zendframework/zend-validator": "~2.0"
+        },
+        "suggest": {
+            "ext-bcmath": "Arbitrary Precision Mathematics",
+            "ext-mbstring": "Multibyte String Functions"
+        },
+        "time": "2014-08-05 16:48:57",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.7-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Respect\\Validation\\": "library/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD Style"
+        ],
+        "authors": [
+            {
+                "name": "Respect/Validation Contributors",
+                "homepage": "https://github.com/Respect/Validation/graphs/contributors"
+            }
+        ],
+        "description": "The most awesome validation engine ever created for PHP",
+        "homepage": "http://respect.li",
+        "keywords": [
+            "respect",
+            "validation",
+            "validator"
+        ]
+    }
+]

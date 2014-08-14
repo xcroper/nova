@@ -1,0 +1,62 @@
+/*Estilização index.php*/
+
+/*Header on default.css*/
+
+#login{
+	width:550px;
+}
+
+#login .input_dados{
+	width:200px;
+	height:20px;
+	float:left;
+}
+
+
+.input_dados:focus{
+    box-shadow:0 0 10px #FFFE00;
+}
+
+.input_dados::-webkit-input-placeholder { 
+	font-size:15px;
+	color: #222;
+}
+
+#content{
+	margin:70px auto;
+}
+
+label{
+	color:#FFF;
+	font-family:"Century Gothic" ,Verdana, Arial;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#signup{
+	width:300px;
+}
+
+#signup .input_dados{
+	width:400px;
+	height:20px;
+}
+.select{
+	color:#222;
+	width:415px;
+	height:35px;
+	display:block;
+	font-family:"Century Gothic", Verdana, Arial;
+	margin-bottom: 10px;
+	font-size: 14px;
+	border-radius: 7px;
+	border: solid 3px #999;
+	background: #FFF;
+	outline: none;	
+	font-weight: bold;
+}
+
+.submit_login{
+	margin-top: 7.5px;
+	height:35px;
+}

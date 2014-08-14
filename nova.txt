@@ -1,0 +1,15 @@
+NOVA
+
+->HTML
+->CSS
+->PHP OO
+->JavaScript
+->jQuery
+->AJAX
+->Google Maps API
+->JAVA (J2ME)
+->MySQL 
+->PDO
+->Composer
+->GIT
+->Design Responsivo
